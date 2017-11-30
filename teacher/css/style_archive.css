@@ -1,0 +1,222 @@
+html{
+	background-color: #DEE3E7;
+}
+body{
+	width: 1002px;
+	margin: 0 auto;
+	font-family: Ubuntu, 'Arial', cursive;
+}
+@font-face {
+    font-family: Ubuntu; /* Гарнитура шрифта */
+    src: url(fonts/Ubuntu.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+    font-family: Rurintania; /* Гарнитура шрифта */
+    src: url(fonts/Rurintania.ttf); /* Путь к файлу со шрифтом */
+}
+p{
+	margin: 0;
+}
+#semester .mounth .name {
+    font-family: Ubuntu, 'Arial', cursive;
+}
+#logo{
+	font-size: 40px;
+    margin: 10px 20px;
+	font-family: Rurintania, 'Arial', cursive;
+	color: #d45d9e;
+	text-shadow: 2px 2px 1px rgba(150, 150, 150, 0.77);
+}
+.clear{clear: both;}
+/*------------------------------------------------------>*/
+#header{
+	height: 100px;
+	/*border: 1px solid black;*/
+}
+#semester{
+	min-height: 212px;
+	/*border: 1px solid black;*/
+	background-color: white;
+}
+#semester #nav_semester{
+	height: 40px;
+	/*border: 1px solid black;*/
+	/*margin: 2px 1px;*/
+	background-color: #32404E;
+}
+#semester .number_semester{
+	width: 125px;
+    float: left;
+    height: 20px;
+    color: white;
+    /* border: 1px solid white; */
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    background-color: #32404E;
+}
+#semester .number_semester p{
+	display: none;
+}
+#semester .number_semeste_active{
+	width: 125px;
+    float: left;
+    height: 38px;
+    color: #7C6159;
+    /* border: 1px solid white; */
+    text-align: center;
+    background-color: white;
+    margin-top: 2px;
+}
+#semester .number_semester_active p{
+	font-size: 10px;
+    margin-top: 5px;
+    color: #7C6159;
+}
+#semester .mounth{
+	width: 240px;
+	/*height: 150px;*/
+	/*border: 1px solid black;*/
+	margin: 0 1px;
+	float: left;
+	padding-bottom: 10px;
+}
+#semester .mounth .name{
+	font-size: 14px;
+	text-align: center;
+	color: #7C6159;
+	padding: 5px 0;
+}
+#semester .day,
+#semester .today,
+#semester .future_day{
+	width: 30px;
+	height: 20px;
+	/*border: 1px solid black;*/
+	margin: 2px;
+	float: left;
+	text-align: center;
+	background-color: #2CAED1;
+	color: white;
+}
+#semester .day{
+	cursor: pointer;
+}
+#semester .today{
+	background-color: #32404E;
+	cursor: pointer;
+}
+#semester .future_day{
+	opacity: 0.8;
+}
+#semester .day_null{
+	width: 30px;
+	height: 20px;
+	/*border: 1px solid black;*/
+	margin: 2px;
+	float: left;
+	text-align: center;
+	background-color: white;
+}
+
+
+/*------------------------------------------Табы semester*/
+/* Базовый контейнер табов */
+/*.tabs {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 0px;
+  margin: 0 auto;
+  
+}*/
+/* Стили секций с содержанием */
+section {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  /*border: 1px solid #ddd;*/
+}
+.tabs input {
+  display: none;
+}
+/* Стили вкладок (табов) *
+.tabs label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+}
+/* Шрифт-иконки от Font Awesome в формате Unicode *
+.tabs label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.tabs label[for*="1"]:before {
+  content: "\f19a";
+}
+.tabs label[for*="2"]:before {
+  content: "\f17a";
+}
+.tabs label[for*="3"]:before {
+  content: "\f13b";
+}
+.tabs label[for*="4"]:before {
+  content: "\f13c";
+}
+/* изменения стиля заголовков вкладок при наведении */
+.tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* стили для активной вкладки */
+#semester.tabs input:checked + label {
+	width: 125px;
+    float: left;
+    /*height: 38px;*/
+    color: #7C6159;
+    /* border: 1px solid white; */
+    text-align: center;
+    background-color: white;
+    margin-top: 2px;
+    padding-top: 5px;
+}
+#semester.tabs input:checked + label p{
+	display: block;
+	font-size: 10px;
+}
+/* активация секций с помощью переключателя :checked */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8 {
+  display: block;
+}
+/* медиа запросы для различных типов носителей */  
+@media screen and (max-width: 680px) {
+  .tabs label {
+    font-size: 0;
+  }
+
+  .tabs label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tabs label {
+    padding: 15px;
+  }
+}    
+
+/*------------------------------------------Конец Табы semester*/

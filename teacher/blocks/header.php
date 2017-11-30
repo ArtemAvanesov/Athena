@@ -1,0 +1,1 @@
+﻿<div id="header"><? echo "Сегодня ".date(" D, j F Y");/* h:i:s A*/?></div>
